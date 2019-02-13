@@ -14,6 +14,7 @@ export default class Pagination extends PureComponent {
     paginationDefaultColor: PropTypes.string,
     paginationStyle: ViewPropTypes.style,
     paginationStyleItem: ViewPropTypes.style,
+	paginationActiveStyleItem: ViewPropTypes.style,
   };
 
   static defaultProps = {
@@ -23,6 +24,7 @@ export default class Pagination extends PureComponent {
     paginationDefaultColor: colors.gray,
     paginationStyle: {},
     paginationStyleItem: {},
+	paginationActiveStyleItem: {},
   };
 
   render() {
@@ -34,6 +36,7 @@ export default class Pagination extends PureComponent {
       paginationActiveColor,
       paginationStyle,
       paginationStyleItem,
+	  paginationActiveStyleItem,
     } = this.props;
     return (
       <View style={[styles.container, paginationStyle]}>
@@ -41,7 +44,7 @@ export default class Pagination extends PureComponent {
           <TouchableOpacity
             style={[
               styles.pagination,
-              paginationStyleItem,
+              paginationIndex === index ? paginationActiveStyleItem : paginationStyleItem,
               paginationIndex === index
                 ? { backgroundColor: paginationActiveColor }
                 : { backgroundColor: paginationDefaultColor },
