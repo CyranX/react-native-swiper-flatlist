@@ -31,6 +31,7 @@ export default class SwiperFlatList extends PureComponent {
     paginationDefaultColor: Pagination.propTypes.paginationDefaultColor,
     paginationStyle: Pagination.propTypes.paginationStyle,
     paginationStyleItem: Pagination.propTypes.paginationStyleItem,
+	  paginationActiveStyleItem: Pagination.propTypes.paginationActiveStyleItem,
 
     // Autoplay
     autoplayDelay: PropTypes.number.isRequired,
@@ -168,6 +169,7 @@ export default class SwiperFlatList extends PureComponent {
       paginationDefaultColor,
       paginationStyle,
       paginationStyleItem,
+	    paginationActiveStyleItem,
       ...props
     } = this.props;
 
@@ -202,6 +204,7 @@ export default class SwiperFlatList extends PureComponent {
       paginationDefaultColor,
       paginationStyle,
       paginationStyleItem,
+	    paginationActiveStyleItem,
     };
 
     return (
